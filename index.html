@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Webbing, el libro de Paola Gutiérrez Martí sobre medicina integrativa: tu salud habla varios idiomas."></head><body>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Webbing, el libro de Paola Gutiérrez Martí sobre medicina integrativa: tu salud habla varios idiomas."><link rel="alternate" hreflang="es" href="https://webbing.mx/"><link rel="alternate" hreflang="en" href="https://webbing.mx/en/"></head><body>
 <title>Webbing · Paola Gutiérrez Martí</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,11 @@ a{color:inherit}
 .barra nav{display:flex;gap:clamp(14px,3vw,32px);flex-wrap:wrap}
 .barra nav a{font-family:var(--display);font-size:14px;text-decoration:none;color:var(--tinta-2)}
 .barra nav a:hover{color:var(--tinta)}
+.selector-idioma{display:inline-flex;align-items:center;gap:9px;margin-left:clamp(0px,1.5vw,12px)}
+.barra nav .selector-idioma a{font-size:12.5px;font-weight:600;letter-spacing:.1em;padding:4px 2px;color:var(--tinta);opacity:.5;border-bottom:2px solid transparent;transition:opacity .22s,border-color .22s}
+.barra nav .selector-idioma a:hover{opacity:.85}
+.barra nav .selector-idioma a[aria-current="true"]{opacity:1;border-bottom-color:var(--ocre)}
+.selector-idioma .sep{opacity:.32;font-size:12px;font-family:var(--display)}
 
 /* Portada */
 .hero{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,96px) clamp(48px,7vw,96px)}
@@ -150,6 +155,7 @@ footer .fin{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;f
       <a href="#webbing">Qué es Webbing</a>
       <a href="#indice">El libro</a>
       <a href="#autora" class="fijo">La autora</a>
+      <span class="selector-idioma"><a href="/" class="fijo" aria-current="true" lang="es">ES</a><span class="sep">|</span><a href="/en/" class="fijo" hreflang="en" lang="en">EN</a></span>
     </nav>
   </header>
 
