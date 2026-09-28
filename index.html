@@ -114,12 +114,15 @@ a{color:inherit}
 .sobre{padding-block:clamp(56px,9vw,120px);border-top:1px solid var(--linea);display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px)}
 .sobre h2{font-size:clamp(38px,5vw,64px);line-height:1;margin-block:14px 28px}
 .cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--linea);margin-top:8px}
-.cifras div{padding:18px 12px 18px 0;display:grid;gap:4px}
-.cifras div+div{padding-left:16px;border-left:1px solid var(--linea)}
+.cifras div{padding:18px 12px;display:grid;gap:6px;justify-items:center;text-align:center;align-content:start}
+.cifras div+div{border-left:1px solid var(--linea)}
 .cifras b{font-family:var(--display);font-weight:300;font-size:clamp(34px,4vw,48px);line-height:1;font-variant-numeric:tabular-nums}
 .cifras span{font-family:var(--display);font-size:13.5px;color:var(--tenue);line-height:1.35}
-.ciudades{margin-top:26px;font-family:var(--display);font-size:15px;color:var(--tinta-2)}
-.ciudades span{color:var(--tenue)}
+.ciudades{margin-top:30px;font-family:var(--display);font-size:15px;color:var(--tinta-2);text-align:center;display:grid;gap:8px}
+.ciudades .rotulo{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--ocre)}
+.sobre>div:first-child{text-align:center}
+.sobre>div:first-child h2{margin-inline:auto}
+.ciudades .pt{color:var(--tenue)}
 
 /* Cierre */
 .cierre{padding-block:clamp(56px,9vw,112px);border-top:1px solid var(--linea);display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
@@ -146,7 +149,6 @@ footer .fin{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;f
   .par,.par+.par{padding:22px 0;border-left:0}
   .partes{grid-template-columns:minmax(0,1fr)}
   .cierre{grid-template-columns:minmax(0,1fr)}
-  .cifras div+div{padding-left:10px}
 }
 
 /* Puertas: la portada es un vestíbulo y cada sección se abre en su propio panel */
@@ -435,7 +437,7 @@ html.con-panel,html.con-panel body{overflow:hidden}
         <div><b>5,000</b><span>terapias realizadas</span></div>
         <div><b>9</b><span>disciplinas en un solo método</span></div>
       </div>
-      <p class="ciudades">Guadalajara <span>·</span> San Francisco <span>·</span> San Diego <span>·</span> Miami</p>
+      <p class="ciudades"><span class="rotulo">Ha acompañado pacientes en</span><span>Guadalajara <span class="pt">·</span> San Francisco <span class="pt">·</span> San Diego <span class="pt">·</span> Miami</span></p>
     </div>
     <div class="prosa">
       <p>Paola no llegó a la medicina alternativa por curiosidad intelectual. <strong>Llegó porque su propio cuerpo le habló y tuvo el valor de escucharlo.</strong></p>
